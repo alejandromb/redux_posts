@@ -9,6 +9,7 @@ export default configureStore({
     posts: postsReducer,
     users: usersReducer,
     notifications: notificationsReducer,
+    [apiSlice.reducerPath]: apiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(apiSlice.middleware),
